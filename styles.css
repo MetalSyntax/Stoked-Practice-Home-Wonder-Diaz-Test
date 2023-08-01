@@ -1,0 +1,416 @@
+/* Main styles */
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+/* Top header styles */
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: solid 0.2px #6F6C6C;
+    padding-left: 49px;
+    height: 34px;
+    margin-top: 29px;
+  }
+
+  .social-media {
+    /* Styles for social media icons */
+    display: flex;
+    align-items: center;
+    width: 262px;
+    height: 24px;
+    left: 49px;
+  }
+
+  .top-message {
+    font-family: Oswald;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+
+  .top-icon-instagram {
+    width: 18.75px;
+    height: 18.75px;
+    top: 2.625px;
+    left: 2.625px; 
+  }
+  
+  .icons {
+    /* Styles for cart, user, shop, and delivery icons */
+    display: flex;
+    justify-content: space-between;
+    width: 144px;
+    height: 24px;  
+    padding-right: 49px;  
+  }
+
+  .top-icon-person,
+  .top-icon-truck,
+  .top-icon-shop,
+  .top-icon-cart {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Main header styles */
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  .logo {
+    /* Styles for company logo */
+  }
+
+  .logo-image {
+    height: 45px;
+    top: 75px;
+    left: 49px;
+    padding-left: 40px;
+  }
+  
+  .main-nav {
+    /* Styles for main navigation menu */
+    width: 670px;
+    height: 25px;
+    top: 86px;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .link {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    height: 25px;
+    margin: 0 10px;
+  }
+
+  .link.selected {
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-decoration: underline;
+  }
+
+  .search-bar {
+    /* Styles for search bar */
+    display: flex;
+    align-items: center;
+    border: 0.5px solid #C2C2C2;
+    border-radius: 5px;
+    width: 233px;
+    margin-right: 35px;  
+  }
+
+  .search-container-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 27px;
+    height: 27px;
+    top: 86px;
+    padding: 3px 0px 1.8px 0px;
+  }
+
+  .search-icon {
+    width: 13px;
+    height: 17px;
+    top: 11px;
+    left: 2px;
+  }
+
+  .search-input {
+    font-family: Oswald;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    padding: 0;
+    border: none;
+    height: 27px;
+    width: 205px;
+  }
+  
+  .hamburger-menu {
+    /* Styles for hamburger menu icon */
+  }
+
+  .shipping-free-container {
+ /* Styles for shipping free */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    background-color: #78020A;
+  }
+
+  .shipping-free-message {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+  }
+  
+  /* Main content styles */
+  main {
+    margin: 0 auto;
+  }
+  
+  .slider-full {
+    /* Styles for full-width slider */
+    height: auto;
+    width: 100%;
+    padding-bottom: 31px;
+  }
+
+  .slider-full img {
+    height: auto;
+    width: 100%;
+  }
+  
+  .three-column-slider {
+    /* Styles for three-column slider section */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+  }
+  
+  .promos {
+    width: calc((100% - 40px) / 3);
+    padding: 0 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .promos img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .six-column-slider {
+    /* Styles for six-column slider section */
+  }
+  
+  .categories {
+    /* Styles for categories section with six horizontal images */
+  }
+  
+  /* Footer styles */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #EEEEEE;
+    color: #000000;
+    padding: 20px 0;
+    padding-bottom: 40px;
+  }
+  
+  /* Styles for the subscribe section */
+   .subscribe {
+    text-align: left;
+    margin-left: 77px;
+  }
+  .subscribe-title {
+    font-family: 'Oswald';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #000000;
+  }
+
+  .subscribe-text {
+    font-family: 'Oswald';
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+  .subscribe h3 {
+    margin-top: 0;
+  }
+  .subscribe label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .subscribe input[type="email"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 0 solid #ccc;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans Condensed';
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 16px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    background-color: transparent;
+  }
+  .checkbox-container {
+    margin-bottom: 10px;
+  }
+  .checkbox-container label {
+    margin-left: 5px;
+  }
+  .subscribe-checkbox {
+    display: flex;
+    font-family: 'Oswald';
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+  .subscribe button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #D3D2D2;
+    color: #000000;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans Condensed';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  
+  /* Styles for the footer columns */
+  .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .column {
+    display: flex;
+    flex: 1;
+  }
+  
+  .sub-column {
+
+  }
+  
+  .sub-column h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Oswald';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+  
+  .sub-column ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sub-column li {
+    margin-bottom: 10px;
+  }
+  
+  .sub-column li a {
+    text-decoration: none;
+    color: #000;
+    opacity: 0.65;
+    font-family: Oswald;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+  
+  .sub-column li a:hover {
+    text-decoration: underline;
+  }
+  
+  .sub-column p {
+    font-family: 'Oswald';
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+  
+  /* Styles for the social media icons */
+  .social-media-icons {
+    text-align: center;
+    width: 122px;
+  }
+  
+  .social-media-icons h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Oswald';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+  
+  .social-media-icons img {
+    width: 24px;
+    height: 24px;
+    padding: 2.25;
+  }
+
+  .copyright {
+
+  }
+
+  .copyright-text {
+    font-family: 'IBM Plex Sans Condensed';'
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 16px;
+    letter-spacing: -0.04em;
+    text-align: center;
+  }
