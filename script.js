@@ -117,3 +117,29 @@ mobileMenuOverlay.addEventListener("click", function () {
   // Remove "open" class from mobile menu overlay
   mobileMenuOverlay.classList.remove("open");
 });
+
+const topHeader = document.querySelector(".top-header");
+const mainHeader = document.querySelector(".main-header");
+const shippingFreeContainer = document.querySelector(".shipping-free-container");
+
+function handleScroll() {
+  if (window.pageYOffset > topHeader.offsetTop) {
+    topHeader.classList.add("fixed");
+  } else {
+    topHeader.classList.remove("fixed");
+  }
+
+  if (window.pageYOffset > mainHeader.offsetTop) {
+    mainHeader.classList.add("fixed");
+  } else {
+    mainHeader.classList.remove("fixed");
+  }
+
+  if (window.pageYOffset > shippingFreeContainer.offsetTop) {
+    shippingFreeContainer.classList.add("fixed");
+  } else {
+    shippingFreeContainer.classList.remove("fixed");
+  }
+}
+
+window.addEventListener("scroll", handleScroll);

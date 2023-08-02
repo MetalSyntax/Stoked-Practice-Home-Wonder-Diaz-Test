@@ -369,6 +369,33 @@ body {
   letter-spacing: -0.04em;
   color: #ffffff;
 }
+@media screen and (min-width: 1024px) {
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.top-header.fixed {
+  margin-top: 0;
+  padding-top: 29px;
+  border-bottom: solid 1px #6f6c6c;
+}
+
+.top-header.fixed .icons {
+  margin-right: 49px;
+}
+
+.main-header.fixed {
+  top: 64px;
+}
+
+.shipping-free-container.fixed {
+  top: 132px;
+}
+}
 
 /* Main content styles */
 main {
