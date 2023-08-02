@@ -1,166 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stoked Practice Home</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@200;400;600&family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Top header -->
-  <section class="top-header">
-    <div class="social-media">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stoked Practice Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@200;300;400;600&family=Oswald:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  </head>
+  <body>
+    <!-- Top header -->
+    <section class="top-header">
+      <div class="social-media">
         <!-- Social media icons -->
-        <p class="top-message">Asesoramiento, preguntas técnicas y más en @stokedchile</p>
-        <!-- <img class="top-icon-instagram" scr="img/instagram-icon.png" alt="instagram icon"/> -->
-    </div>
-    <div class="icons">
+        <p class="top-message">
+          Asesoramiento, preguntas técnicas y más en @stokedchile
+          <a href="#"><img class="top-icon-instagram" src="img/instagram-icon.png" alt="Instagram" /></a>
+        </p>
+      </div>
+      <div class="icons">
         <!-- Cart, user, shop, and delivery icons -->
-        <img class="top-icon-person" src="img/person-icon.png" alt="person icon"/>
-        <img class="top-icon-truck" src="img/truck-icon.png" alt="truck icon"/>
-        <img class="top-icon-cart" src="img/cart-icon.png" alt="cart icon"/>
-        <img class="top-icon-shop" src="img/shop-icon.png" alt="shop icon"/>
-    </div>
-  </section>
+        <a href="#"><img  class="top-icon-person" src="img/person-icon.png" alt="person icon"/></a>
+        <a href="#"><img class="top-icon-truck" src="img/truck-icon.png" alt="truck icon" /></a>
+        <a href="#"><img class="top-icon-cart" src="img/cart-icon.png" alt="cart icon" /></a>
+        <a href="#"><img class="top-icon-shop" src="img/shop-icon.png" alt="shop icon" /></a>
+      </div>
+    </section>
 
-  <!-- Main header -->
-  <header class="main-header">
-    <div class="logo">
-      <!-- Company logo -->
-      <img class="logo-image" src="img/stoked-logo.png" alt="stocked logo"/>
-    </div>
-    <nav class="main-nav">
-      <!-- Main navigation menu -->
-      <ul>
-        <li>
+    <!-- Main header -->
+    <header class="main-header">
+      <div class="logo">
+        <!-- Company logo -->
+        <img class="logo-image" src="img/stoked-logo.png" alt="stocked logo" />
+      </div>
+      <div class="mobile-menu">
+        <a href="#"><img class="mobile-menu-person" src="img/person-menu.png" alt="person icon"/></a>
+        <a href="#"><img class="mobile-menu-cart" src="img/shopping-cart.png" alt="shopping cart icon" /></a>
+        <a href="#" class="hamburguer-button"><img class="mobile-menu-hamburguer" src="img/hamburguer.png" alt="hamburgue icon" /></a>
+      </div>
+      <!-- Mobile menu -->
+      <div class="mobile-menu-overlay">
+        <nav class="mobile-nav">
+          <img class="logo-image-mobile" src="img/stoked-logo.png" alt="stocked logo" />
+          <ul>
+            <li>
+              <a href="#">Trajes de agua</a>
+              <img class="mobile-menu-icon" src="img/ph_caret-down-light.png" alt="caret down icon" />
+            </li>
+            <li>
+              <a href="#">Hombre</a>
+              <img class="mobile-menu-icon" src="img/ph_caret-down-light.png" alt="caret down icon" />
+            </li>
+            <li>
+              <a href="#">Mujer</a>
+              <img class="mobile-menu-icon" src="img/ph_caret-down-light.png" alt="caret down icon" />
+            </li>
+            <li>
+              <a href="#">Niños</a>
+              <img class="mobile-menu-icon" src="img/ph_caret-down-light.png" alt="caret down icon" />
+            </li>
+            <li>
+              <a href="#">Accesorios</a>
+              <img class="mobile-menu-icon" src="img/ph_caret-down-light.png" alt="caret down icon" />
+            </li>
+            <li>
+              <a href="#">Equipamiento</a>
+              <img class="mobile-menu-icon" src="img/ph_caret-down-light.png" alt="caret down icon" />
+            </li>
+            <li>
+              <a style="font-weight: 400; text-decoration: underline;" href="#">Sale</a>
+            </li>
+            <li class="especial-link">
+              <a  href="#">Chatea con nosotros</a>
+              <img class="mobile-menu-icon" src="img/ph_chats-circle-light.png" alt="shopping cart icon" />
+            </li>
+            <li class="especial-link">
+              <a  href="#">Seguimiento de pedidos</a>
+              <img class="mobile-menu-icon" src="img/ph_truck-light.png" alt="shopping cart icon" />
+            </li>
+            <li class="especial-link">
+              <a  href="#">Nuestras tiendas</a>
+              <img class="mobile-menu-icon" src="img/ph_storefront-light.png" alt="shopping cart icon" />
+            </li>
+            <li class="especial-link">
+              <a  href="#">Mi cuenta</a>
+              <img class="mobile-menu-icon" src="img/ph_user-light.png" alt="shopping cart icon" />
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="main-nav">
+        <!-- Main navigation menu -->
+        <ul>
+          <li>
             <a class="link selected" href="#">Trajes de agua</a>
-        </li>
-        <li>
+          </li>
+          <li>
             <a class="link" href="#">Hombre</a>
-        </li>
-        <li>
+          </li>
+          <li>
             <a class="link" href="#">Mujer</a>
-        </li>
-        <li>
+          </li>
+          <li>
             <a class="link" href="#">Niños</a>
-        </li>
-        <li>
+          </li>
+          <li>
             <a class="link" href="#">Accesorios</a>
-        </li>
-        <li>
+          </li>
+          <li>
             <a class="link" href="#">Equipamiento</a>
-        </li>
-        <li>
+          </li>
+          <li>
             <a class="link" href="#">Sale</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="search-bar">
-      <!-- Search bar -->
-      <div class="search-container-icon">
-        <a class="search-link" href="#">
-            <img class="search-icon" src="img/search-icon.png" alt="search icon"/>
-        </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <!-- Search bar -->
+        <div class="search-container-icon">
+          <a class="search-link" href="#">
+            <img
+              class="search-icon"
+              src="img/search-icon.png"
+              alt="search icon"
+            />
+          </a>
+        </div>
+        <input class="search-input" type="text" placeholder="BUSCAR" />
       </div>
-      <input class="search-input" type="text" placeholder="BUSCAR">
-    </div>
-    <!--<button class="hamburger-menu">
-      Hamburger menu icon 
-    </button> -->
-  </header>
+    </header>
 
-  <section class="shipping-free-container">
-    <span class="shipping-free-message">ENVÍO GRATIS POR COMPRAS SOBRE $50.000</span>
-  </section>
-
-  <!-- Main content -->
-  <main>
-    <section class="slider-full">
-      <!-- Full-width slider -->
-      <img src="img/stoked-banner.png" />
+    <section class="shipping-free-container">
+      <span class="shipping-free-message"
+        >ENVÍO GRATIS POR COMPRAS SOBRE $50.000</span
+      >
     </section>
-    <section class="three-column-slider">
-      <!-- Three-column slider section -->
-      <div class="promos">
-        <img class="promo1" src="img/promo1.png" alt="promo1"/>
-      </div>
-      <div class="promos">
-        <img class="promo2" src="img/promo2.png" alt="promo2"/>
-      </div>
-      <div class="promos">
-        <img class="promo3" src="img/promo3.png" alt="promo3"/>
-      </div>
-    </section>
-    <section class="six-column-slider">
-      <!-- Six-column slider section -->
-    </section>
-    <section class="categories">
-      <!-- Categories section with six horizontal images -->
-    </section>
-  </main>
 
-<!-- Footer -->
-<footer>
-    <div class="subscribe">
-      <h3 class="subscribe-title">Subscríbete</h3>
-      <p class="subscribe-text">¡Infórmate de las noticias, eventos, promociones, descuentos, sorteos y concursos que tenemos para ti!</p>
-      <form>
-        <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico:">
-        <div class="subscribe-checkbox">
-          <input type="checkbox" id="subscribe-checkbox" name="subscribe-checkbox">
-          <label for="subscribe-checkbox">Acepto recibir promociones y novedades de Stoked y marcas representadas por Komax.</label>
+    <!-- Main content -->
+    <main>
+      <section class="slider-full">
+        <!-- Full-width slider -->
+        <div class="swiper slider-full-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide slide_1">
+              <img data-src="img/stoked-banner.png" alt="STOKED BANNER" class="swiper-lazy"/>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide slide_2">
+              <img data-src="img/banner-principal.png" alt="BANNER PRINCIPAL" class="swiper-lazy"/>
+            </div>
+          </div>
+          <div class="swiper-scrollbar"></div>
         </div>
-        <button type="submit">Regístrate</button>
-      </form>
-    </div>
-    <div class="footer-columns">
-      <div class="column">
-        <div class="sub-column">
-          <h3>Te informamos</h3>
-          <ul>
-            <li><a href="#">Formulario de contacto</a></li>
-            <li><a href="#">Chatea con nosotros</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Términos y condiciones</a></li>
-            <li><a href="#">Nuestras tiendas</a></li>
-          </ul>
+        <!--<img src="img/stoked-banner.png" alt="stoked banner" />-->
+      </section>
+      <section class="three-column-slider">
+        <div class="swiper three-slider-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide slide_1">
+              <img data-src="img/promo1.png" alt="VERANO HOMBRE" class="swiper-lazy"/>
+              <p class="swiper-title">VERANO HOMBRE</p>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide slide_2">
+              <img data-src="img/promo2.png" alt="POLERONES 30% OFF" class="swiper-lazy"/>
+              <p class="swiper-title">POLERONES 30% OFF</p>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide slide_3">
+              <img data-src="img/promo3.png" alt="POLERAS 2X 24.990" class="swiper-lazy"/>
+              <p class="swiper-title">POLERAS 2X 24.990</p>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-scrollbar"></div>
         </div>
-        <div class="sub-column">
-          <ul>
-            <li><a href="#">Costos de envío</a></li>
-            <li><a href="#">Medios de pago</a></li>
-            <li><a href="#">Estado de mi pedido</a></li>
-            <li><a href="#">Cambios y devoluciones</a></li>
-            <li><a href="#">Garantías</a></li>
-          </ul>
+      </section>
+      <section class="six-column-slider">
+        <!-- Six-column slider section -->
+        <h3 class="six-slider-title">LO QUE LA ESTÁ LLEVANDO</h3>
+        <!-- Slider main container -->
+        <div class="swiper six-slider-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide slide_1">
+              <img alt="" data-src="img/mujer.png" class="swiper-lazy" />
+              <p class="swiper-title">POLERA GOOFY MUJER RECICLADA</p>
+              <label class="swiper-price">$19.990</label>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide slide_2">
+              <img alt="" data-src="img/short-playa.png" class="swiper-lazy" />
+              <p class="swiper-title">TRAJE DE BAÑO BOARDSHORT MAHÉ HOMBRE RECICLADO</p>
+              <label class="swiper-sale">$34.990</label><label class="swiper-price">$24.493</label>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide slide_3">
+              <img alt="" data-src="img/short.png" class="swiper-lazy" />
+              <p class="swiper-title">SHORT GOOFY MUJER RECICLADO</p>
+              <label class="swiper-sale">$19.990</label><label class="swiper-price">$13.993</label>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide slide_4">
+              <img alt="" data-src="img/camisa-line.png" class="swiper-lazy" />
+              <p class="swiper-title">CAMISA LINEN SHIRT LOBO HOMBRE</p>
+              <label class="swiper-sale">$34.990</label><label class="swiper-price">$24.493</label>
+            </div>
+            <!-- Slide 5 -->
+            <div class="swiper-slide slide_5">
+              <img alt="" data-src="img/polera.png" class="swiper-lazy" />
+              <p class="swiper-title">POLERA GOOFY MUJER RECICLADA</p>
+              <label class="swiper-sale">$24.990</label><label class="swiper-price">$17.493</label>
+            </div>
+            <!-- Slide 6 -->
+            <div class="swiper-slide slide_1">
+              <img alt="" data-src="img/traje.png" class="swiper-lazy" />
+              <p class="swiper-title">POLERA GOOFY MUJER RECICLADA</p>
+              <label class="swiper-sale">$24.990</label><label class="swiper-price">$17.493</label>
+            </div>
+            <!-- Slide 7 -->
+            <div class="swiper-slide slide_2">
+              <img alt="" data-src="img/short.png" class="swiper-lazy" />
+              <p class="swiper-title">TRAJE DE BAÑO BOARDSHORT MAHÉ HOMBRE RECICLADO</p>
+              <label class="swiper-sale">$34.990</label><label class="swiper-price">$24.493</label>
+            </div>
+            <!-- Slide 8 -->
+            <div class="swiper-slide slide_3">
+              <img alt="" data-src="img/camisa.png" class="swiper-lazy" />
+              <p class="swiper-title">SHORT GOOFY MUJER RECICLADO</p>
+              <label class="swiper-sale">$19.990</label><label class="swiper-price">$13.993</label>
+            </div>
+            <!-- Slide 9 -->
+            <div class="swiper-slide slide_4">
+              <img alt="" data-src="img/polera.png" class="swiper-lazy" />
+              <p class="swiper-title">CAMISA LINEN SHIRT LOBO HOMBRE</p>
+              <label class="swiper-sale">$34.990</label><label class="swiper-price">$24.493</label>
+            </div>
+            <!-- Slide 10 -->
+            <div class="swiper-slide slide_5">
+              <img alt="" data-src="img/traje.png" class="swiper-lazy" />
+              <p class="swiper-title">POLERA GOOFY MUJER RECICLADA</p>
+              <label class="swiper-sale">$24.990</label><label class="swiper-price">$17.493</label>
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-button-black"></div>
+          <div class="swiper-button-prev swiper-button-black"></div>
+        </div>
+      </section>
+      <section class="categories">
+        <!-- Categories section with six horizontal images -->
+        <h3 class="category-title">Categorías</h3>
+        <div class="category">
+          <img src="img/sustentabilidad.png" alt="Trajes de agua" />
+          <a class="link-categories" href="#">Trajes de agua</a>
+        </div>
+        <div class="category">
+          <img src="img/local.png" alt="Hombre" />
+          <a class="link-categories" href="#">Hombre</a>
+        </div>
+        <div class="category">
+          <img src="img/arte.png" alt="Mujer" />
+          <a class="link-categories" href="#">Mujer</a>
+        </div>
+        <div class="category">
+          <img src="img/sustentabilidad.png" alt="Niños" />
+          <a class="link-categories" href="#">Niños</a>
+        </div>
+        <div class="category">
+          <img src="img/local.png" alt="Accesorios" />
+          <a class="link-categories" href="#">Accesorios</a>
+        </div>
+        <div class="category">
+          <img src="img/arte.png" alt="Equipamiento" />
+          <a class="link-categories" href="#">Equipamiento</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="subscribe">
+        <h3 class="subscribe-title">Subscríbete</h3>
+        <p class="subscribe-text">
+          ¡Infórmate de las noticias, eventos, promociones, descuentos, sorteos
+          y concursos que tenemos para ti!
+        </p>
+        <form>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ingresa tu correo electrónico:"
+          />
+          <div class="subscribe-checkbox">
+            <input
+              type="checkbox"
+              id="subscribe-checkbox"
+              name="subscribe-checkbox"
+            />
+            <label for="subscribe-checkbox"
+              >Acepto recibir promociones y novedades de Stoked y marcas
+              representadas por Komax.</label
+            >
+          </div>
+          <button type="submit">Regístrate</button>
+        </form>
+      </div>
+      <div class="footer-columns">
+        <h3>Te informamos</h3>
+        <div class="column">
+          <div class="sub-column">
+            <ul>
+              <li><a href="#">Formulario de contacto</a></li>
+              <li><a href="#">Chatea con nosotros</a></li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Términos y condiciones</a></li>
+              <li><a href="#">Nuestras tiendas</a></li>
+            </ul>
+          </div>
+          <div class="sub-column">
+            <ul>
+              <li><a href="#">Costos de envío</a></li>
+              <li><a href="#">Medios de pago</a></li>
+              <li><a href="#">Estado de mi pedido</a></li>
+              <li><a href="#">Cambios y devoluciones</a></li>
+              <li><a href="#">Garantías</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="column">
-        <div class="sub-column">
-          <h3>Nuestras Tiendas</h3>
-          <p>OMZ <br>AV. Costanera S/N <br>Matanza <br> +56932687133</p>
-        </div>
-        <div class="sub-column">
-            <p>ALTOMAR <br>AV. Comercio #2241<br> Pichilemu<br> +56932687132</p>
+      <div class="footer-columns">
+        <h3>Nuestras Tiendas</h3>
+        <div class="column">
+          <div class="sub-column">
+            <p>
+              OMZ <br />AV. Costanera S/N <br />Matanza <br />
+              +56932687133
+            </p>
+          </div>
+          <div class="sub-column">
+            <p>
+              ALTOMAR <br />AV. Comercio #2241<br />
+              Pichilemu<br />
+              +56932687132
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="social-media-icons">
-      <h3>Nuestras Redes</h3>
-      <img src="img/facebook-icon.png" alt="Facebook">
-      <img src="img/twitter-icon.png" alt="Twitter">
-      <img src="img/instagram-icon.png" alt="Instagram">
-    </div>
-  </footer>
+      <div class="social-media-icons">
+        <h3>Nuestras Redes</h3>
+        <div class="column">
+          <a href="#"><img src="img/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="img/twitter-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="img/instagram-icon.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </footer>
 
-  <div class="copyright">
-    <p class="copyright-text">2022 ©  Komax S.A.  Todos los derechos reservados | AV. del Parque 4314, Huechuraba, Santiago de Chile | sac@komax.cl</p>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <div class="copyright">
+      <p class="copyright-text">
+        2022 © Komax S.A. Todos los derechos reservados | AV. del Parque 4314,
+        Huechuraba, Santiago de Chile | sac@komax.cl
+      </p>
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
