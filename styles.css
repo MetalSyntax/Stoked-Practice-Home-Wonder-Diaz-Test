@@ -1,818 +1,860 @@
 /* Main styles */
 body {
-    font-family: 'Oswald', sans-serif;
-    margin: 0;
+  font-family: "Oswald", sans-serif;
+  margin: 0;
 }
 /* Top header styles */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: solid 0.2px #6f6c6c;
+  padding-left: 49px;
+  height: 34px;
+  margin-top: 29px;
+}
+
+.social-media {
+  /* Styles for social media icons */
+  display: flex;
+  align-items: center;
+  width: 262px;
+  height: 24px;
+}
+
+.top-message {
+  display: flex;
+  align-items: center;
+  font-family: "Oswald";
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.top-icon-instagram {
+  width: 18.75px;
+  height: 18.75px;
+  top: 2.625px;
+  padding-left: 7px;
+}
+
+.icons {
+  /* Styles for cart, user, shop, and delivery icons */
+  display: flex;
+  justify-content: space-between;
+  width: 144px;
+  height: 24px;
+  padding-right: 49px;
+}
+
+.top-icon-person,
+.top-icon-truck,
+.top-icon-shop,
+.top-icon-cart {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 980px) {
   .top-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    border-bottom: solid 0.2px #6F6C6C;
-    padding-left: 49px;
-    height: 34px;
-    margin-top: 29px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border-bottom: solid 0px #6f6c6c;
   }
-
-  .social-media {
-    /* Styles for social media icons */
-    display: flex;
-    align-items: center;
-    width: 262px;
-    height: 24px;
-  }
-
   .top-message {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    font-family: 'Oswald';
-    font-size: 10px;
-    font-weight: 300;
-    line-height: 15px;
-    letter-spacing: 0.05em;
-    text-align: left;
   }
-
-  .top-icon-instagram {
-    width: 18.75px;
-    height: 18.75px;
-    top: 2.625px;
-    padding-left: 7px; 
+  .social-media {
+    width: 100%;
+    justify-content: end;
+    padding: 0 20.5px;
   }
-  
   .icons {
-    /* Styles for cart, user, shop, and delivery icons */
-    display: flex;
-    justify-content: space-between;
-    width: 144px;
-    height: 24px;  
-    padding-right: 49px;  
+    display: none;
+  }
+}
+
+/* Main header styles */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.logo-image {
+  height: 45px;
+  margin-left: 40px;
+}
+
+.mobile-menu img {
+  width: 25px;
+  height: auto;
+  margin-left: 25px;
+}
+
+/* Hamburguer button */
+.hamburguer-button {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Mobile menu open */
+.mobile-menu-overlay.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.logo-image-mobile {
+  margin: 20px;
+  height: 35px;
+  width: auto;
+}
+
+/* Mobile nav */
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80%;
+  background-color: #fff;
+  box-sizing: border-box;
+  transform: scale(0.5);
+  opacity: 0; 
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.mobile-menu-overlay.open .mobile-nav  {
+  transform: scale(1); 
+  opacity: 1; 
+}
+
+/* Mobile nav list */
+.mobile-nav ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Mobile nav list item */
+.mobile-nav li {
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.5px solid #827d7d;
+}
+
+.mobile-nav li img {
+  margin-right: 20px;
+}
+
+.mobile-nav li.especial-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+}
+
+.mobile-nav li.especial-link img {
+  margin-right: 20px;
+}
+
+.especial-link a:hover::before {
+  transition: all 0.2s ease-out; 
+}
+
+/* Mobile nav link */
+.mobile-nav a {
+  font-family: "Oswald";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-left: 20px;
+}
+
+.mobile-menu-icon {
+  height: 24px;
+  width: auto;
+}
+
+.mobile-menu-hamburguer {
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+
+.mobile-menu-hamburguer:hover {
+  transform: translateY(-2px); 
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Main nav */
+  .main-nav {
+    display: block;
   }
 
-  .top-icon-person,
-  .top-icon-truck,
-  .top-icon-shop,
-  .top-icon-cart {
-    width: 24px;
-    height: 24px;
-  }
-
-  @media screen and (max-width: 980px) {
-    .top-header {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 10px;
-      border-bottom: solid 0px #6F6C6C;
-    }
-    .top-message {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .social-media {
-      width: 100%;
-      justify-content: end;
-      padding: 0 20.5px;
-    }
-    .icons {
-      display: none;
-    }
-  }
-  
-  /* Main header styles */
-  .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px;
-  }
-
-  .logo-image {
-    height: 45px;
-    margin-left: 40px;
-  }
-
-  .mobile-menu img{
-    width: 25px;
-    height: auto;
-    margin-left: 25px;
-  }
-
-  /* Hamburguer button */
-  .hamburguer-button {
-    display: inline-block;
-    cursor: pointer;
+  /* Mobile menu */
+  .mobile-menu {
+    display: none;
   }
 
   /* Mobile menu overlay */
   .mobile-menu-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s ease-in-out;
+    display: none;
   }
+}
 
-  /* Mobile menu open */
-  .mobile-menu-overlay.open {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .logo-image-mobile {
-    margin: 20px;
-    height: 35px;
-    width: auto;
-  }
-
-  /* Mobile nav */
-  .mobile-nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 80%;
-    background-color: #fff;
-    box-sizing: border-box;
-  }
-
-  /* Mobile nav list */
-  .mobile-nav ul {
-    display: block;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  /* Mobile nav list item */
-  .mobile-nav li {
-    height: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    border: 0.5px solid #827D7D;
-  }
-
-  .mobile-nav li img {
-    margin-right: 20px;
-  }
-
-
-  .mobile-nav  li.especial-link {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    background: #F9F9F9;
-  }
-
-  .mobile-nav  li.especial-link img {
-    margin-right: 20px;
-  }
-
-  /* Mobile nav link */
-  .mobile-nav a {
-    font-family: 'Oswald';
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 27px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    display: block;
-    color: #000;
-    text-decoration: none;
-    transition: color 0.2s;
-    margin-left: 20px;
-  }
-
-  .mobile-menu-icon {
-    height: 24px;
-    width: auto;
-  }
-
-  @media only screen and (min-width: 1024px) {
-    /* Main nav */
-    .main-nav {
-      display: block;
-    }
-
-    /* Mobile menu */
-    .mobile-menu {
-      display: none;
-    }
-
-    /* Mobile menu overlay */
-    .mobile-menu-overlay {
-      display: none;
-    }
-  }
-
-  @media only screen and (max-width: 1023px) {
-    .main-nav {
-      display: none;
-    }
-  }
-
-  
+@media only screen and (max-width: 1023px) {
   .main-nav {
-    /* Styles for main navigation menu */
-    width: 100%;
-    height: 25px;
+    display: none;
   }
-  
-  .main-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .link {
-    display: block;
-    text-decoration: none;
-    color: #000000;
-    font-family: 'Oswald';
-    font-size: 16px;
-    font-weight: 200;
-    line-height: 24px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    height: 25px;
-    margin: 0 10px;
-  }
+}
 
-  .link.selected {
-    font-family: 'Oswald';
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    text-decoration: underline;
-  }
+.main-nav {
+  /* Styles for main navigation menu */
+  width: 100%;
+  height: 25px;
+}
 
-  .search-bar {
-    /* Styles for search bar */
-    display: flex;
-    align-items: center;
-    border: 0.5px solid #C2C2C2;
-    border-radius: 5px;
-    width: 233px;
-    margin-right: 35px;  
-  }
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
 
-  .search-container-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 27px;
-    height: 27px;
-    top: 86px;
-    padding: 3px 0px 1.8px 0px;
-  }
+.link {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  height: 25px;
+  margin: 0 10px;
+}
 
-  .search-icon {
-    width: 13px;
-    height: 17px;
-    top: 11px;
-    left: 2px;
-  }
+.link.selected {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-decoration: underline;
+}
 
-  .search-input {
-    font-family: 'Oswald';
-    font-size: 12px;
-    font-weight: 200;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    padding: 0;
-    border: none;
-    height: 27px;
-    width: 205px;
-  }
+.search-bar {
+  /* Styles for search bar */
+  display: flex;
+  align-items: center;
+  border: 0.5px solid #c2c2c2;
+  border-radius: 5px;
+  width: 233px;
+  margin-right: 35px;
+}
 
-  @media screen and (max-width: 980px) {
-    .main-header {
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-    .logo-image {
-      margin-left: 10px;
-    }
-    .main-nav {
-      display: none;
-    }
-    .logo-image {
-      margin-bottom: 10px;
-    }
-    .search-bar {
-      order: 0;
-    }
-    .search-input {
-      order: 1;
-      padding: 0 10px;
-    }
-    .search-bar,   
-    .search-input {
-      width: 100%;
-      margin-right: 0;
-    }
-    .search-container-icon {
-      order: 2;
-    }  
-  }
+.search-container-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+  top: 86px;
+  padding: 3px 0px 1.8px 0px;
+}
 
-  .shipping-free-container {
- /* Styles for shipping free */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 25px;
-    text-align: center;
-    background-color: #78020A;
-  }
+.search-icon {
+  width: 13px;
+  height: 17px;
+  top: 11px;
+  left: 2px;
+}
 
-  .shipping-free-message {
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 13px;
-    letter-spacing: -0.04em;
-    color: #FFFFFF;
-  }
-  
-  /* Main content styles */
-  main {
-    margin: 0 auto;
-    overflow-x: hidden;
-  }
-  
-  .slider-full {
-    /* Styles for full-width slider */
-    height: auto;
-    width: 100%;
-    padding-bottom: 31px;
-  }
-  
-  .three-column-slider {
-    /* Styles for three-column slider section */
-    display: flex;
+.search-input {
+  font-family: "Oswald";
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  padding: 0;
+  border: none;
+  height: 27px;
+  width: 205px;
+}
+
+@media screen and (max-width: 980px) {
+  .main-header {
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 12px;
-    padding-left: 20px;
-    padding-right: 20px;
-    overflow: hidden;
+    margin-bottom: 20px;
   }
-
-  .six-column-slider {
-    /* Styles for six-column slider section */
-    display: flex;
-    flex-direction: column;
-  }
-
-  .six-slider-title {
-    font-family: 'Oswald';
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    text-align: left;
+  .logo-image {
     margin-left: 10px;
-    text-decoration: underline;
   }
-
-  /* Swiper container styling */
-  .swiper.six-slider-swiper {
-    position: relative;
-    width: 90%;
-    height: 100%;
-    margin: 0px auto;
+  .main-nav {
+    display: none;
   }
-
-  /* Slide styling */
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  .logo-image {
+    margin-bottom: 10px;
   }
-
-  .swiper-slide img {
-    display: block;
+  .search-bar {
+    order: 0;
+  }
+  .search-input {
+    order: 1;
+    padding: 0 10px;
+  }
+  .search-bar,
+  .search-input {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin-right: 0;
   }
+  .search-container-icon {
+    order: 2;
+  }
+}
 
+.shipping-free-container {
+  /* Styles for shipping free */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  background-color: #78020a;
+}
+
+.shipping-free-message {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+/* Main content styles */
+main {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.slider-full {
+  /* Styles for full-width slider */
+  height: auto;
+  width: 100%;
+  padding-bottom: 31px;
+}
+
+.three-column-slider {
+  /* Styles for three-column slider section */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+.six-column-slider {
+  /* Styles for six-column slider section */
+  display: flex;
+  flex-direction: column;
+}
+
+.six-slider-title {
+  font-family: "Oswald";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+/* Swiper container styling */
+.swiper.six-slider-swiper {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0px auto;
+}
+
+/* Slide styling */
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide img:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+}
+
+.swiper-slide p {
+  font-family: "Oswald";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.swiper-slide p:hover {
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+.swiper-price {
+  font-family: "Oswald";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.swiper-sale {
+  font-family: "Oswald";
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6f6c6c;
+  text-decoration: line-through;
+  padding-right: 10px;
+}
+
+.swiper-pagination {
+  text-align: right !important;
+}
+
+/* Arrow styling */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  outline: none;
+  color: #000;
+  font-size: 18px !important;
+}
+
+/* Arrow position */
+.swiper-button-next {
+  right: 0px;
+}
+
+.swiper-button-prev {
+  left: 0px;
+}
+
+@media screen and (max-width: 980px) {
   .swiper-slide p {
-    font-family: 'Oswald';
-    font-size: 15px;
+    font-family: "Oswald";
+    font-size: 12px;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 18px;
     letter-spacing: 0em;
     text-align: center;
   }
-
   .swiper-price {
-    font-family: 'Oswald';
-    font-size: 20px;
+    font-family: "Oswald";
+    font-size: 12px;
     font-weight: 600;
-    line-height: 29px;
+    line-height: 18px;
     letter-spacing: 0em;
     text-align: left;
   }
 
   .swiper-sale {
-    font-family: 'Oswald';
-    font-size: 15px;
+    font-family: "Oswald";
+    font-size: 12px;
     font-weight: 300;
-    line-height: 22px;
+    line-height: 18px;
     letter-spacing: 0em;
     text-align: left;
-    color: #6F6C6C;
+    color: #6f6c6c;
     text-decoration: line-through;
     padding-right: 10px;
   }
+}
 
-  .swiper-pagination {
-    text-align: right !important;
-  }
+.categories {
+  /* Styles for categories section with six horizontal images */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 31px 40px;
+}
 
-  /* Arrow styling */
-  .swiper-button-next:after,
-  .swiper-button-prev:after {
-    outline: none;
-    color: #000;
-    font-size: 18px !important;
-  }
+.category-title {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  width: 100%;
+  text-decoration: underline;
+}
 
-  /* Arrow position */
-  .swiper-button-next {
-    right: 0px;
-  }
+.category {
+  flex-basis: calc(16.5% - 20px);
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
 
-  .swiper-button-prev {
-    left: 0px;
-  }
+.category img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.2s ease-out; 
+}
 
-  @media screen and (max-width: 980px) {
-    .swiper-slide p {
-      font-family: 'Oswald';
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 18px;
-      letter-spacing: 0em;
-      text-align: center;
-    }
-    .swiper-price {
-      font-family: 'Oswald';
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 18px;
-      letter-spacing: 0em;
-      text-align: left;      
-    }
-  
-    .swiper-sale {
-      font-family: 'Oswald';
-      font-size: 12px;
-      font-weight: 300;
-      line-height: 18px;
-      letter-spacing: 0em;
-      text-align: left;
-      color: #6F6C6C;
-      text-decoration: line-through;
-      padding-right: 10px;
-    }
-  }
+.category img:hover {
+  transform: scale(1.1); 
+}
 
-  .categories {
-    /* Styles for categories section with six horizontal images */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 31px 40px;
-  }
+.category a {
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  margin-top: 10px;
+  color: #000000;
+}
 
+.category a:hover {
+  opacity: 0.65;
+}
+
+@media screen and (max-width: 980px) {
   .category-title {
-    font-family: 'Oswald';
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    width: 100%;
-    text-decoration: underline;
+    margin-left: 14px;
   }
-  
+  .categories {
+    margin: 0px 5px;
+  }
   .category {
-    flex-basis: calc(16.50% - 20px);
-    margin-bottom: 20px;
-    text-align: left;
-    width: 100%;
+    flex-basis: calc(50% - 20px);
   }
-  
-  .category img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  .category a {
-    font-family: 'Oswald';
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    margin-top: 10px;
-    color: #000000;
-  }
+}
 
-  @media screen and (max-width: 980px) {
-    .category-title {
-      margin-left: 14px;
-    }
-    .categories {
-      margin: 0px 5px;
-    }
-    .category {
-      flex-basis: calc(50% - 20px);
-    }
-  }
-  
-  /* Footer styles */
+/* Footer styles */
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eeeeee;
+  color: #000000;
+  padding: 20px 0;
+  padding-bottom: 40px;
+}
+
+/* Styles for the subscribe section */
+.subscribe {
+  text-align: left;
+  margin-left: 77px;
+  margin-right: 30px;
+}
+.subscribe-title {
+  font-family: "Oswald";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #000000;
+}
+
+.subscribe-text {
+  font-family: "Oswald";
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+.subscribe h3 {
+  margin-top: 0;
+  width: 100%;
+}
+.subscribe label {
+  display: block;
+}
+.subscribe input[type="email"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 0 solid #ccc;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans Condensed";
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 16px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  background-color: transparent;
+}
+.checkbox-container {
+  margin-bottom: 10px;
+}
+.checkbox-container label {
+  margin-left: 5px;
+}
+.subscribe-checkbox {
+  display: flex;
+  font-family: "Oswald";
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.subscribe button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #d3d2d2;
+  color: #000000;
+  cursor: pointer;
+  font-family: "IBM Plex Sans Condensed";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  -webkit-box-shadow: 0px 10px 20px -10px rgba(155, 154, 154, 1);
+  -moz-box-shadow: 0px 10px 20px -10px rgba(155, 154, 154, 1);
+  box-shadow: 0px 10px 20px -10px rgba(155, 154, 154, 1);
+}
+
+.subscribe button[type="submit"]:hover {
+  transform: scale(1.05); 
+}
+
+/* Styles for the footer columns */
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sub-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.footer-columns h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: "Oswald";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  width: 100%;
+  opacity: 0.65;
+}
+
+.sub-column ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
+}
+
+.sub-column li {
+  margin-bottom: 5px;
+}
+
+.sub-column li a {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.65;
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.sub-column li a:hover {
+  text-decoration: underline;
+}
+
+.sub-column p {
+  font-family: "Oswald";
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  margin-right: 30px;
+  opacity: 0.65;
+  margin-top: 0;
+}
+
+/* Styles for the social media icons */
+.social-media-icons {
+  text-align: center;
+  width: 122px;
+  margin-right: 77px;
+}
+
+.social-media-icons h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: "Oswald";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  width: 100%;
+}
+
+.social-media-icons img {
+  width: 24px;
+  height: 24px;
+  padding: 2.25;
+}
+
+.copyright-text {
+  font-family: "IBM Plex Sans Condensed";
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 16px;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+@media screen and (max-width: 980px) {
   footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #EEEEEE;
-    color: #000000;
-    padding: 20px 0;
-    padding-bottom: 40px;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding-bottom: 0;
   }
-  
-  /* Styles for the subscribe section */
-   .subscribe {
-    text-align: left;
-    margin-left: 77px;
-    margin-right: 30px;
-  }
-  .subscribe-title {
-    font-family: 'Oswald';
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    color: #000000;
-  }
-
-  .subscribe-text {
-    font-family: 'Oswald';
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    text-align: left;
-  }
-  .subscribe h3 {
-    margin-top: 0;
+  .subscribe {
+    margin: 0;
+    padding: 34px 18px;
+    background-color: #eeeeee;
     width: 100%;
-  }
-  .subscribe label {
-    display: block;
   }
   .subscribe input[type="email"] {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 4px;
-    border: 0 solid #ccc;
-    box-sizing: border-box;
-    font-family: 'IBM Plex Sans Condensed';
-    font-size: 12px;
-    font-weight: 200;
-    line-height: 16px;
-    letter-spacing: -0.04em;
-    text-align: left;
-    background-color: transparent;
-  }
-  .checkbox-container {
-    margin-bottom: 10px;
-  }
-  .checkbox-container label {
-    margin-left: 5px;
+    border: 0.5px solid #000000;
+    border-radius: 5px;
   }
   .subscribe-checkbox {
-    display: flex;
-    font-family: 'Oswald';
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    margin-bottom: 10px;
+    align-items: flex-start;
   }
-  .subscribe button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    background-color: #D3D2D2;
-    color: #000000;
-    cursor: pointer;
-    font-family: 'IBM Plex Sans Condensed';
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    text-align: center;
-    -webkit-box-shadow: 0px 10px 20px -10px rgba(155,154,154,1);
-    -moz-box-shadow: 0px 10px 20px -10px rgba(155,154,154,1);
-    box-shadow: 0px 10px 20px -10px rgba(155,154,154,1);
+  .subscribe-checkbox label {
+    padding-left: 5px;
   }
-  
-  /* Styles for the footer columns */
   .footer-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: baseline;
-  }
-
-  .column {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .sub-column {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     width: 50%;
+    padding: 32px 0 0;
   }
-  
-  .footer-columns h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-family: 'Oswald';
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    width: 100%;
-    opacity: 0.65;
+  .footer-columns h3,
+  .column {
+    padding-left: 50px;
   }
-  
-  .sub-column ul {
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-right: 30px;
-  }
-  
-  .sub-column li {
-    margin-bottom: 5px;
-  }
-  
-  .sub-column li a {
-    text-decoration: none;
-    color: #000;
-    opacity: 0.65;
-    font-family: Oswald;
-    font-size: 12px;
-    font-weight: 200;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    text-align: left;
-  }
-  
-  .sub-column li a:hover {
-    text-decoration: underline;
-  }
-  
-  .sub-column p {
-    font-family: 'Oswald';
-    font-size: 12px;
-    font-weight: 200;
-    line-height: 25px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    margin-right: 30px;
-    opacity: 0.65;
-    margin-top: 0;
-  }
-  
-  /* Styles for the social media icons */
   .social-media-icons {
-    text-align: center;
-    width: 122px;
-    margin-right: 77px;
-  }
-  
-  .social-media-icons h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-family: 'Oswald';
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    text-align: left;
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    justify-content: center;
+    padding: 20px;
   }
-  
-  .social-media-icons img {
-    width: 24px;
-    height: 24px;
-    padding: 2.25;
-  }
-
-  .copyright-text {
-    font-family: 'IBM Plex Sans Condensed';
-    font-size: 12px;
-    font-weight: 200;
-    line-height: 16px;
-    letter-spacing: -0.04em;
+  .social-media-icons h3 {
     text-align: center;
   }
-
-  @media screen and (max-width: 980px) {
-    footer {
-      flex-wrap: wrap;
-      background-color: #FFFFFF;
-      padding-bottom: 0;
-    }
-    .subscribe {
-      margin: 0;
-      padding: 34px 18px;
-      background-color: #EEEEEE;
-      width: 100%;
-    }
-    .subscribe input[type="email"] {
-      border: 0.5px solid #000000;
-      border-radius: 5px;
-    }
-    .subscribe-checkbox {
-      align-items: flex-start;
-    }
-    .subscribe-checkbox label {
-      padding-left: 5px;
-    }
-    .footer-columns {
-      width: 50%;
-      padding: 32px 0 0;
-    }
-    .footer-columns h3,
-    .column {
-      padding-left: 50px;
-    }
-    .social-media-icons {
-      margin-right: 0;
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      justify-content: center;
-      padding: 20px;
-    }
-    .social-media-icons h3 {
-      text-align: center;
-    }
-    .social-media-icons .column {
-      width: 122px;
-    }
-    .copyright {
-      margin: 0 24px;
-    }
+  .social-media-icons .column {
+    width: 122px;
   }
-
-  @media screen and (max-width: 680px) {
-    .footer-columns {
-      width: 100%;
-      padding: 32px 50px 0;
-    }
-    .footer-columns h3,
-    .column {
-      padding-left: 0;
-    }
+  .copyright {
+    margin: 0 24px;
   }
+}
+
+@media screen and (max-width: 680px) {
+  .footer-columns {
+    width: 100%;
+    padding: 32px 50px 0;
+  }
+  .footer-columns h3,
+  .column {
+    padding-left: 0;
+  }
+}
