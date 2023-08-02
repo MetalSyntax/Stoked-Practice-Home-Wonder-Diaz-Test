@@ -460,6 +460,7 @@ main {
   width: 90%;
   height: 100%;
   margin: 0px auto;
+  padding: 0px 20px;
 }
 
 /* Slide styling */
@@ -534,11 +535,21 @@ main {
 
 /* Arrow position */
 .swiper-button-next {
-  right: 0px;
+  right: -9px !important;
+  box-shadow: -11px 0px 11px -2px #9A9A9B;
+  background-color: #FFF;
 }
 
 .swiper-button-prev {
-  left: 0px;
+  box-shadow: 11px 0px 11px -2px #9A9A9B;
+  left: -9px !important;
+  background-color: #FFF;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+  top: 8.5% !important;
+  height: 100% !important;
 }
 
 @media screen and (max-width: 980px) {
