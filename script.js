@@ -119,30 +119,14 @@ mobileMenuOverlay.addEventListener("click", function () {
 });
 
 // Selecting the top header element
-const topHeader = document.querySelector(".top-header");
-// Selecting the main header element
-const mainHeader = document.querySelector(".main-header");
-// Selecting the shipping free container element
-const shippingFreeContainer = document.querySelector(".shipping-free-container");
+const allHeader = document.querySelector(".all-header");
 // Function to handle the scroll event
 function handleScroll() {
-  // Adding the "fixed" class to the top header when scrolling past its offset position
-  if (window.pageYOffset > topHeader.offsetTop) {
-    topHeader.classList.add("fixed");
+  // Adding the "fixed" class to the all headers when scrolling past its offset position
+  if (window.pageYOffset > allHeader.offsetTop) {
+    allHeader.classList.add("fixed");
   } else {
-    topHeader.classList.remove("fixed");
-  }
-  // Adding the "fixed" class to the main header when scrolling past its offset position
-  if (window.pageYOffset > mainHeader.offsetTop) {
-    mainHeader.classList.add("fixed");
-  } else {
-    mainHeader.classList.remove("fixed");
-  }
-  // Adding the "fixed" class to the shipping free container when scrolling past its offset position
-  if (window.pageYOffset > shippingFreeContainer.offsetTop) {
-    shippingFreeContainer.classList.add("fixed");
-  } else {
-    shippingFreeContainer.classList.remove("fixed");
+    allHeader.classList.remove("fixed");
   }
 }
 // Adding a scroll event listener to the window, calling the handleScroll function
